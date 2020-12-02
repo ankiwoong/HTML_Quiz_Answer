@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: table;
+            text-align: center;
+            vertical-align: middle;
+            margin: 20px;
+        }
+
+        #one {
+            position: relative;
+            display: table-cell;
+            background-color: hotpink;
+            left: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #two {
+            position: relative;
+            display: table-cell;
+            background-color: lightcoral;
+            right: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #three {
+            position: relative;
+            display: table-cell;
+            background-color: lightseagreen;
+            left: -400px;
+            bottom: -200px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #four {
+            position: relative;
+            display: table-cell;
+            background-color: lightgray;
+            right: 400px;
+            bottom: -200px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="one">left:0;top:0</div>
+        <div id="two">right:0;top:0</div>
+        <div id="three">left:0;bottom:0</div>
+        <div id="four">right:0;bottom:0</div>
+    </div>
+</body>
+
+</html>
