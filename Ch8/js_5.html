@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 5</title>
+</head>
+
+<body>
+    <!-- 자신이 가장 좋아하는 곡을 저장하는 객체를 정의하여 본다. -->
+    <!-- 객체는 "가수" , "연주시간", "제목"의 속성을 사용한다.-->
+    <script>
+        function music() {
+            var music_array = {
+                "가수": "한혜진",
+                "연주시간": "03:40",
+                "제목": "갈색추억"
+            };
+
+            document.write("제가 좋아하는 가수는 " + music_array["가수"] + " 님 입니다. <br />");
+            document.write("제가 좋아하는 제목은 " + music_array["제목"] + " 입니다. <br />");
+            document.write("제가 좋아하는 노래 " + music_array["제목"] + "에 플레이시간은" + music_array["연주시간"] + "입니다.");
+        }
+
+        music();
+    </script>
+</body>
+
+</html>
