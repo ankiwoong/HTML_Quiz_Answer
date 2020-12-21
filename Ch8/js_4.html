@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 4</title>
+</head>
+
+<body>
+    <!-- 주어진 조건을 보고 자바스크립트 프로그램을 작성하시오. -->
+    <script>
+        function process(game){
+            if (game == true) {
+                // console.log("Ok");
+                alert("좋습니다. 게임을 시작합니다.");
+            } else {
+                // console.log("No");
+                alert("네, 나중에 하시죠.");
+            }
+        }
+
+        var game = confirm("게임 한판 하실래요?");
+        process(game);
+    </script>
+</body>
+
+</html>
