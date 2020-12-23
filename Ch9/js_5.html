@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 5</title>
+</head>
+
+<body>
+    <script>
+        var arr = ["사과", "오렌지", "귤", "당근", "케일"];
+
+        minIndexNumber = 0;
+        maxIndexNumber = arr.length - 1;
+        randomIndexNumber = Math.floor(Math.random() * (maxIndexNumber - minIndexNumber)) + minIndexNumber;
+
+        valueArr = arr[randomIndexNumber];
+
+        alert(valueArr);
+    </script>
+</body>
+
+</html>
