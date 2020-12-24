@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 8</title>
+</head>
+
+<body>
+    <script>
+        function calendarWork() {
+            var dt = new Date();
+
+            var currentMonth = dt.getMonth() + 1;
+            var currentDay = dt.getDate();
+
+            // console.log(currentMonth);
+            // console.log(currentDay);
+
+            document.write(currentMonth + "월 " + currentDay + "일");
+        }
+
+        setTimeout(calendarWork(), 8.64e+7);
+    </script>
+</body>
+
+</html>
