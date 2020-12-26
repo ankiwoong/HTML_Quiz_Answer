@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 4</title>
+    <style>
+        #galaxy {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="galaxy.jpg" alt="galaxy" id="galaxy" onclick="changeImage()">
+    <p>그림을 클릭하여 보세요!</p>
+
+    <script>
+        function changeImage() {
+            document.getElementById("galaxy").src = "stars.jpg";
+        }
+    </script>
+</body>
+
+</html>
