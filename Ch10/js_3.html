@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3</title>
+</head>
+
+<body>
+    <p>숫자를 입력하시오.</p>
+    <form method="POST">
+        <input type="text" id="number">
+        <input type="button" value="입력완료" onclick="numberVerification(document.getElementById('number'))">
+    </form>
+
+    <script>
+        function numberVerification(elem) {
+            var temp = elem.value;
+            var exp = /^[0-9]+$/;
+
+            if (temp.match(exp) || isNaN(Number(temp)) != true) {
+                alert("숫자 입니다.");
+                elem.focus();
+            } else {
+                alert("숫자가 아닙니다.");
+                elem.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>
