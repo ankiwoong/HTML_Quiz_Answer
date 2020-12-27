@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Quiz 1</title>
+    <style>
+        body {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.lineTo(100, 100);
+        context.lineTo(200, 0);
+        context.lineTo(300, 100);
+        context.lineTo(400, 0);
+        context.lineTo(500, 100);
+        context.lineWidth = 2;
+        context.stroke();
+    </script>
+</body>
+
+</html>
