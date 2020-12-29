@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz 1</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("#target").hide();
+                // console.log("감추기");
+            });
+            $("#button2").click(function () {
+                $("#target").show();
+                // console.log("보이기");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="target">이것은 p 요소입니다.</p>
+    <button id="button1">감추기</button>
+    <button id="button2">보이기</button>
+</body>
+
+</html>
