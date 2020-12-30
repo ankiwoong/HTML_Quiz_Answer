@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz 3</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#right").click(function () {
+                $("#jquery").animate({ left: '100px' });
+            });
+            $("#left").click(function () {
+                $("#jquery").animate({ right: '100px' });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="left">&lt;&lt;</button>
+    <button id="right">&gt;&gt;</button><br />
+    <img id="jquery" src="jquery.png" width="200px" alt="jqery" style="position: relative; padding-left: 100px;">
+</body>
+
+</html>
