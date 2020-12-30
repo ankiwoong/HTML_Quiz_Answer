@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz 4</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            background-color: #bca;
+            width: 100px;
+            border: 1px solid green;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                $("#block").animate({
+                    width: "200px",
+                    height: "50px",
+                    fontSize: "40px",
+                    marginLeft: "50px",
+                    borderTopWidth: "10px",
+                    borderLeftWidth: "10px"
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <button id="button">&gt;&gt; Run</button>
+    <div id="block">Hello!</div>
+</body>
+
+</html>
