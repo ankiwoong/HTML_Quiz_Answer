@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz 2</title>
+    <style>
+        #target {
+            font-size: 20px;
+            color: lightseagreen;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#text").keyup(function () {
+                $("#target").text($("#text").val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" name="text" id="text">
+    <p id="target"></p>
+</body>
+
+</html>
