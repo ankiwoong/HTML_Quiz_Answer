@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Drop Quiz</title>
+    <style>
+        #zone {
+            width: 200px;
+            height: 100px;
+            border: 1px dotted red;
+        }
+    </style>
+    <script>
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+
+        function handleDragStart(e) {
+            e.dataTransfer.effectAllowed = "move";
+            e.dataTransfer.setData("Text", e.target.id);
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            var button = e.dataTransfer.getData("Text");
+            e.target.appendChild(document.getElementById(button));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="zone" ondrop="handleDrop(event)" ondragover="allowDrop(event)"></div>
+    <button id="button" draggable="true" ondragstart="handleDragStart(event)">Drag me</button>
+</body>
+
+</html>
