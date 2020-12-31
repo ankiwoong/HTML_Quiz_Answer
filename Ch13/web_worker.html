@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker Quiz</title>
+</head>
+
+<body>
+    <p>Counter numbers:
+        <output id="result"></output>
+    </p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+
+    <script>
+        var w;
+
+        function startWorker() {
+            if (typeof (Worker) !== "undefined") {
+                if (typeof (w) == "undefined") {
+                    w = new Worker("worker.js");
+                }
+                w.onmessage = function (event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            }
+            else {
+                document.getElementById("result").innerHTML = "웹브라우저가 웹워커를 지원하지 않음";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+        }
+    </script>
+</body>
+
+</html>
