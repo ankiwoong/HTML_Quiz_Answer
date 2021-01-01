@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File API Quiz</title>
+    <style>
+        #main {
+            border: 1px dotted black;
+            width: 500px;
+            height: auto;
+            font-weight: bold;
+            font-size: 30px;
+            margin: 20px;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        이미지 갤러리
+    </div>
+    <div id="preview"></div>
+    <p>이미지 파일을 선택하세요.<input id="browse" type="file" onchange="previewFiles()" multiple></p>
+    <script>
+        function previewFiles() {
+            var preview = document.querySelector('#preview');
+            var files = document.querySelector('input[type=file]').files;
+
+            function readAndPreview(file) {
+                if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+                    var reader = new FileReader();
+
+                    reader.addEventListener("load", function () {
+                        var image = new Image();
+                        image.title = file.name;
+                        image.alt = file.name;
+                        image.src = this.result;
+                        preview.appendChild(image);
+                    }, false);
+
+                    reader.readAsDataURL(file);
+                }
+            }
+            if (files) {
+                [].forEach.call(files, readAndPreview);
+            }
+        }
+    </script>
+</body>
+
+</html>
