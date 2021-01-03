@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP Quiz 7</title>
+</head>
+
+<body>
+    <form method="GET" action="result_1.jsp">
+        <hr>
+        <input type="radio" name="calc" value="1" checked>
+        <label for="add">덧셈<br /></label>
+
+        <input type="radio" name="calc" value="2">
+        <label for="mul">곱셈<br /></label>
+
+        <input type="radio" name="calc" value="3">
+        <label for="div">나눗셈</label>
+        <hr>
+        첫번째 연산자 <input type="text" name="a" id="a"><br />
+        두번째 연산자 <input type="text" name="b" id="b"><br />
+        <input type="submit" value="쿼리 전송">
+    </form>
+</body>
+
+</html>
