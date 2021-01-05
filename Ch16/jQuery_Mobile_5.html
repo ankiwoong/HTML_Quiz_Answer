@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Mobile Quiz 5</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="content">
+            <p>클릭하면 사라집니다.</p>
+            <p>클릭하면 사라집니다.</p>
+            <p>클릭하면 사라집니다.</p>
+        </div>
+    </div>
+
+    <script>
+        $("p").click(function () {
+            $(this).hide();
+            return true;
+        });    
+    </script>
+</body>
+
+</html>
